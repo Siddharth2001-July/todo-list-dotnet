@@ -1,0 +1,19 @@
+﻿@model ToDoItem
+
+<h3 class="display-3">Edit Item</h3>
+<div class="m-5 p-5">
+    <form method="post" asp-action="Edit">
+        <div class="row">
+            <div class="col-5">
+                <input type="text" asp-for="Name" placeholder="Add New Item" class="form-control" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="col-4">
+                <label>Completed On</label>
+                <input type="datetime-local" asp-for="doneOn">
+            </div>
+            <div class="col-3"><button type="submit" class="btn btn-success">Update</button></div>
+        </div>
+        <a asp-controller="Home" asp-action="Index" class="mt-5 btn btn-primary">Back</a>
+    </form>
+</div>
